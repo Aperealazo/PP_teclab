@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: index.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +23,8 @@
       <ul class="nav flex-column">
         <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-grid"></i> Dashboard</a></li>
         <li class="nav-item"><a class="nav-link" href="php/crear_cursos.php"><i class="bi bi-mortarboard"></i> Crear Curso</a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-plus"></i> Agregar Alumnos</a></li>
+        <li class="nav-item"><a class="nav-link" href="php/crear_divisiones.php"><i class="bi bi-mortarboard"></i> Crear División</a></li>
+        <li class="nav-item"><a class="nav-link" href="php/agregar_alumnos.php"><i class="bi bi-person-plus"></i> Agregar Alumnos</a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pencil-square"></i> Gestionar Notas</a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-calendar-check"></i> Gestionar Asistencia</a></li>
       </ul>
@@ -26,6 +34,7 @@
 
     <!-- Contenido principa -->
     <main class="flex-grow-1 p-4">
+      <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</h1>
       <h3><strong>Bienvenido/a, Pablo !</strong></h3>
       <p class="text-muted">Acá hay un resumen del estado de tus cursos</p>
 

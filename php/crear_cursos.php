@@ -15,8 +15,9 @@
 <!-- Sidebar o nav? preguntarle a pablo-->
 <div class="sidebar">
   <h2>Mi Aula</h2>
-  <a href="crear_cursos.php" class="active"><i class="bi bi-journal-plus me-2"></i>Crear Curso</a>
-  <a href="alumnos.php"><i class="bi bi-people me-2"></i>Agregar Alumnos</a>
+  <a href="crear_cursos.php"><i class="bi bi-journal-plus me-2"></i>Crear Curso</a>
+  <a href="crear_divisiones.php"><i class="bi bi-diagram-3 me-2"></i>Crear División</a>
+  <a href="agregar_alumnos.php" class="active"><i class="bi bi-people me-2"></i>Agregar Alumnos</a>
   <a href="notas.php"><i class="bi bi-pencil-square me-2"></i>Gestionar Notas</a>
   <a href="asistencia.php"><i class="bi bi-calendar-check me-2"></i>Gestionar Asistencia</a>
 </div>
@@ -46,7 +47,7 @@
           <option value="6">6°</option>
         </select>
       </div>
-
+    <!-- tengo que definirlo en alumnos o notas?
       <div class="mb-3">
         <label for="division">División</label>
         <select id="division" class="form-select" required>
@@ -54,7 +55,7 @@
           <option value="2da">2da</option>
         </select>
       </div>
-
+      -->
       <div class="mb-3">
         <label for="descripcion">Descripción</label>
         <textarea id="descripcion" class="form-control" rows="3" placeholder="Descripción del curso" required></textarea>
